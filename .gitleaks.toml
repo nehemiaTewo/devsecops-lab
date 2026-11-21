@@ -1,0 +1,9 @@
+[extend]
+useDefault = true
+
+# Default rules allowlist AWS's "...EXAMPLE" keys, so add a rule without that allowlist.
+[[rules]]
+id = "lab-aws-access-key-id"
+description = "AWS access key ID (lab rule, no EXAMPLE allowlist)"
+regex = '''\b((?:A3T[A-Z0-9]|AKIA|ASIA|ABIA|ACCA)[A-Z0-9]{16})\b'''
+keywords = ["akia", "asia", "abia", "acca", "a3t"]
